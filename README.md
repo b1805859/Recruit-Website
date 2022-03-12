@@ -4,4 +4,4 @@ Build a website by Nodejs, SCSS, mongoDB, Boostrap 4
 run npm start
 
 
-then npm run watch
+then search: http://localhost:8080/
