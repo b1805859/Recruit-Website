@@ -7,11 +7,11 @@
     <div class="search-header">
         <div class="search-form-wrapper">
                <form name="search-form--job" class="search-form d-flex justify-content-start">
-                    <div class="search-form-keyword mr-2">
-                        <input type="text" name="query" id="search_text--navbar" value="" class="search-form__keyword-input"
+                    <div class="search-form-keyword">
+                        <input type="text" name="query" id="search_text--navbar" value="" class="search-form__keyword-input" autocomplete="off"
                         placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty..." data-search--autocomplete-target="query" data-action="search--autocomplete#toggleClearButton">
                     </div>
-                    <div class="search-form-location mr-2">
+                    <div class="search-form-location">
                         <select id="form-select" class="form-control-combobox">
                             <option value="Ho Chi Minh">Ho Chi Minh</option>
                             <option value="Ha Noi">Ha Noi</option>
@@ -37,31 +37,31 @@
     <section id="jobs">
         <div class="container jobs-overlow">
             <h5>RECENT UPDATES</h5>
-            {{#each Jobs}}
-                    <div class="company-details">
-                        <div class="job-update">
-                            <h4><b>{{this.name}}</b></h4>
-                            <i class="fa fa-briefcase"></i><span>{{this.time}}</span><br>
-                            <i class="fa fa-solid fa-location-dot"></i><span>{{this.location}}</span>
-                            <p class="mt-2">Skills: {{this.skill}}</p>
-                            <p class="mt-1"
-                                style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"
-                            >
-                                Description: {{this.description}}
-                            </p>
+
+            <div data-aos="fade-left">
+                {{#each Jobs}}
+                        <div class="company-details">
+                            <div class="job-update">
+                                <h4><b>{{this.name}}</b></h4>
+                                <i class="fa fa-briefcase"></i><span>{{this.time}}</span><br>
+                                <i class="fa fa-solid fa-location-dot"></i><span>{{this.location}}</span>
+                                <p class="mt-2">Skills: {{this.skill}}</p>
+                                <p class="mt-1"
+                                    style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"
+                                >
+                                    Description: {{this.description}}
+                                </p>
+                            </div>
+
+                            <div class="apply-btn">
+                                <button type="button" class="btn btn-primary mr-2"><a href="/search/{{this._id}}/detail" style="color:#fff">Read more</a></button>
+                                <button type="button" id="btn-apply" class="btn btn-primary mr-3" >
+                                    <a href="/search/{{this._id}}/apply" style="color: #fff !important">Apply</a>
+                                </button>
+                            </div>
                         </div>
-
-                        <div class="apply-btn">
-                            <button type="button" class="btn btn-primary mr-2"><a href="/search/{{this._id}}/detail" style="color:#fff">Read more</a></button>
-                            <button type="button" id="btn-apply" class="btn btn-primary mr-3" >
-                                <a href="/search/{{this._id}}/apply" style="color: #fff !important">Apply</a>
-                            </button>
-                        </div>
-                    </div>
-
-
-
-            {{/each}} 
+                {{/each}} 
+            </div>
         </div>
     </section>
 </div>

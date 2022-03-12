@@ -23,7 +23,7 @@ class JobControllers
     }
 
     locationkeyword(req, res, next) {
-      Jobs.find({keyword: req.params.keyword},{location: req.params.location})
+      Jobs.find({keyword: req.params.keyword , location: req.params.location})
         .then(Jobs=>{
           res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs)});
         })
