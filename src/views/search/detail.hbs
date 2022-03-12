@@ -1,0 +1,43 @@
+<section id="header">
+        {{> header}}
+    </section>
+
+<div class="container job-details-wrap" style="height: calc(100vh - 76px); background-color:#fff !important; padding:0 55px">
+    <div class="job-details height-content">
+        <div class="job-details__header">
+            <h1 class="job-details__title text-center">{{Job.name}}</h1>
+            <div class="job-details__overview">
+                <div class="job-details__company_name"><b>Name company:</b><span>{{Job.name_company}}</span></div>
+                <div class="job-details__contact">
+                    <i class="fa fa-solid fa-phone"></i><span>{{Job.phone}}</span>
+                </div>
+                <div class="job-details__monney"><span>{{Job.money}}</span></div>
+                <div class="job-details__location">
+                    <i class="fa fa-briefcase"></i><span>{{Job.time}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="job-details__information">
+            <div class="job-details__paragraph1 py-3">
+                <h2 class="job-details__paragraph-title">Job Description</h2>
+                <p class="job-details__paragraph-text">{{Job.description}}</p>
+            </div>
+             <div class="job-details__paragraph2 py-3">
+                <h2 class="job-details__paragraph-title">Your Skills and Experience</h2>
+                <p class="job-details__paragraph-text">{{Job.experience}}</p>
+            </div>
+        </div>
+         <div class="job-details__apply">
+             <div class="job-details__apply-box">
+                 <a href="" class="job-details__apply-btn">
+                     Apply now
+                 </a>
+             </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+        {{> footer}}
+</footer>

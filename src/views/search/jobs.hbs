@@ -1,0 +1,122 @@
+<section id="header">
+        {{> header}}
+    </section>
+
+
+<div class="container container-search" style="height: calc(100vh - 88px)">
+    <div class="search-header">
+        <div class="search-form-wrapper">
+               <form name="search-form--job" class="search-form d-flex justify-content-start">
+                    <div class="search-form-keyword mr-2">
+                        <input type="text" name="query" id="search_text--navbar" value="" class="search-form__keyword-input"
+                        placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty..." data-search--autocomplete-target="query" data-action="search--autocomplete#toggleClearButton">
+                    </div>
+                    <div class="search-form-location mr-2">
+                        <select id="form-select" class="form-control-combobox">
+                            <option value="Ho Chi Minh">Ho Chi Minh</option>
+                            <option value="Ha Noi">Ha Noi</option>
+                            <option value="Da Nang">Da Nang</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="btn-search-form" class="search-form-submit">
+                            <div class="search-form-submit-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                    </button>
+               </form>
+        </div>
+    </div>
+    
+
+
+
+
+
+    {{!-- ----------------------------------------render job--------------------------------------------- --}}
+    <section id="jobs">
+        <div class="container jobs-overlow">
+            <h5>RECENT UPDATES</h5>
+            {{#each Jobs}}
+                    <div class="company-details">
+                        <div class="job-update">
+                            <h4><b>{{this.name}}</b></h4>
+                            <i class="fa fa-briefcase"></i><span>{{this.time}}</span><br>
+                            <i class="fa fa-solid fa-location-dot"></i><span>{{this.location}}</span>
+                            <p class="mt-2">Skills: {{this.skill}}</p>
+                            <p class="mt-1"
+                                style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"
+                            >
+                                Description: {{this.description}}
+                            </p>
+                        </div>
+
+                        <div class="apply-btn">
+                            <button type="button" class="btn btn-primary mr-2"><a href="/search/{{this._id}}/detail" style="color:#fff">Read more</a></button>
+                            <button type="button" id="btn-apply" class="btn btn-primary mr-3" >
+                                <a href="/search/{{this._id}}/apply" style="color: #fff !important">Apply</a>
+                            </button>
+                        </div>
+                    </div>
+
+
+
+            {{/each}} 
+        </div>
+    </section>
+</div>
+
+
+
+<footer>
+        {{> footer}}
+    </footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+        var formSearch = document.forms['search-form--job'];
+        var btnSearch = document.getElementById('btn-search-form');
+        var inputSearch = document.getElementById('search_text--navbar');
+        var combobox = document.getElementById("form-select");
+
+        btnSearch.onclick = function()
+        {
+            var inputSearchValue = inputSearch.value;
+            var comboboxValue = combobox.value;
+                
+                if(inputSearchValue==="")
+                {  
+                    if(comboboxValue.includes("Others"))
+                    {
+                        formSearch.action = "/search/jobs/";
+                        formSearch.submit();
+                    }
+                    else
+                    {
+                        formSearch.action = comboboxValue;
+                        formSearch.submit();
+                    } 
+                }
+                else
+                {
+
+                    if(comboboxValue.includes("Others"))
+                    {
+                        formSearch.action = inputSearchValue;
+                        formSearch.submit();
+                    }
+                    else
+                    {
+                        formSearch.action = comboboxValue+ "/" +inputSearchValue ;
+                        formSearch.submit();
+                        
+                    } 
+                }
+
+            
+        }
+        
+
+    });
+</script>

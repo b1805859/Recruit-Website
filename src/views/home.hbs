@@ -1,0 +1,203 @@
+<section id="header">
+        {{> header}}
+    </section>
+
+
+
+<div class="banner text-center">
+    <h1>2,786 Việc Làm IT Cho Developer Chất</h1>
+    <div class="search-job text-center">
+        <form method="GET" name="form-search-job" style="    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        ">
+           
+            <input type="text" name="query"  value="" id="input-search-job" class="search-form__keyword-input height-40 border-radius4"
+                        placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty..." data-search--autocomplete-target="query" data-action="search--autocomplete#toggleClearButton">
+            <select id="form-search-location" class="form-search-combobox height-40 border-radius4">
+                                <option value="Ho Chi Minh">Ho Chi Minh</option>
+                                <option value="Ha Noi">Ha Noi</option>
+                                <option value="Da Nang">Da Nang</option>
+                                <option value="Others">Others</option>
+            </select>
+            <button type="submit" id="btn-search-job" class="btn btn-primary height-40 border-radius4">Tìm kiếm</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+{{!-- -----------------------------top recruiters------------------------------ --}}
+<section id="recruiters">
+    <div class="container text-center">
+        <h3>Nhà Tuyển Dụng Hàng Đầu</h3>
+        <div class="row">
+            <div class="col-xs-12 col-md-3 wrap_company" data-aos="fade-up">
+                <div href="" class="top-company">
+                    <div class="top-company__logo text-center">
+                        <img src="/img/Logo_company/AMANOTES.png" alt="" height="170" width="170">
+                    </div>
+                    <div class="top-company__name text-center">
+                        AMANOTES
+                    </div>
+                    <div class="top-company__location text-center">
+                        Ho Chi Minh
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-3 wrap_company" data-aos="fade-up">
+                <div href="" class="top-company">
+                    <div class="top-company__logo text-center">
+                        <img src="/img/Logo_company/CMC.png" alt="" height="170" width="170">
+                    </div>
+                    <div class="top-company__name text-center">
+                        CMC Global
+                    </div>
+                    <div class="top-company__location text-center">
+                        Ha Noi
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3 wrap_company" data-aos="fade-up">
+                <div href="" class="top-company">
+                    <div class="top-company__logo text-center">
+                        <img src="/img/Logo_company/HANSEN.png" alt="" height="170" width="170">
+                    </div>
+                    <div class="top-company__name text-center">
+                        Hansen Technologies
+                    </div>
+                    <div class="top-company__location text-center">
+                        Ho Chi Minh
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3 wrap_company" data-aos="fade-up">
+                <div href="" class="top-company">
+                    <div class="top-company__logo text-center">
+                        <img src="/img/Logo_company/HCL.png" alt="" height="170" width="170">
+                    </div>
+                    <div class="top-company__name text-center">
+                        HCL Vietnam Company Limited
+                    </div>
+                    <div class="top-company__location text-center">
+                        Ha Noi
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-xs-12 col-md-3 wrap_company" data-aos="fade-up">
+                <div href="" class="top-company">
+                    <div class="top-company__logo text-center">
+                        <img src="/img/Logo_company/MB.png" alt="" height="170" width="170">
+                    </div>
+                    <div class="top-company__name text-center">
+                        MB Bank
+                    </div>
+                    <div class="top-company__location text-center">
+                        Ha Noi
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-3 wrap_company" data-aos="fade-up">
+                <div href="" class="top-company">
+                    <div class="top-company__logo text-center">
+                        <img src="/img/Logo_company/NAKIVO.png" alt="" height="170" width="170">
+                    </div>
+                    <div class="top-company__name text-center">
+                        Nakivo
+                    </div>
+                    <div class="top-company__location text-center">
+                        Ho Chi Minh
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3 wrap_company" data-aos="fade-up">
+                <div href="" class="top-company">
+                    <div class="top-company__logo text-center">
+                        <img src="/img/Logo_company/PLAYSTUDIOS.png" alt="" height="170" width="170">
+                    </div>
+                    <div class="top-company__name text-center">
+                        PLAYSTUDIOS
+                    </div>
+                    <div class="top-company__location text-center">
+                        Ha Noi
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3 wrap_company" data-aos="fade-up">
+                <div href="" class="top-company">
+                    <div class="top-company__logo text-center">
+                        <img src="/img/Logo_company/SAMSUNG.png" alt="" height="170" width="170">
+                    </div>
+                    <div class="top-company__name text-center">
+                        Samsung Electronics HCMC CE Complex
+                    </div>
+                    <div class="top-company__location text-center">
+                        Ho Chi Minh
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+</section>
+
+<footer>
+        {{> footer}}
+</footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+        var formSearch = document.forms['form-search-job'];
+        var btnSearch = document.getElementById('btn-search-job');
+        var inputSearch = document.getElementById('input-search-job');
+        var combobox = document.getElementById("form-search-location");
+
+        btnSearch.onclick = function()
+        {
+            var inputSearchValue = inputSearch.value;
+            var comboboxValue = combobox.value;
+                
+                if(inputSearchValue==="")
+                {  
+                    if(comboboxValue.includes("Others"))
+                    {
+                        formSearch.action = "search/jobs/";
+                        formSearch.submit();
+                    }
+                    else
+                    {
+                        formSearch.action = "search/jobs/" + comboboxValue;
+                        formSearch.submit();
+                    } 
+                }
+                else
+                {
+
+                    if(comboboxValue.includes("Others"))
+                    {
+                        formSearch.action = "search/jobs/" + inputSearchValue;
+                        formSearch.submit();
+                    }
+                    else
+                    {
+                        formSearch.action = "search/jobs/" +comboboxValue+ "/" +inputSearchValue ;
+                        formSearch.submit();
+                        
+                    } 
+                }
+
+            
+        }
+        
+
+    });
+</script>
