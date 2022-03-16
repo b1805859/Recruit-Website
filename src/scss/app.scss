@@ -353,7 +353,7 @@ select{
     height:36px;
     display: inline-block;
     padding:0 15px;
-    background-color:#EA1E30;
+    background-color: $btn-color;
     color:#fff;
     font-size:18px;
     outline: none;
@@ -433,7 +433,7 @@ select{
 .apply-btn
 {
     height: 40px;
-    background-image: linear-gradient(to right, #6db9ef, #7ce08a);
+    background-image: $bg-linear;
     padding: 7px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -446,7 +446,7 @@ select{
     float: right;
     border-radius: 0;
     box-shadow: none !important;
-    background: transparent;
+    background: $btn-color;
     border: 1px solid #fff;
 
 }
@@ -505,6 +505,11 @@ select{
     padding: 15px 0;
 }
 
+.job-details__information
+{
+    margin-bottom:20px;
+}
+
 .job-details__paragraph-title
 {
     font-size: 23px;
@@ -545,13 +550,7 @@ select{
 
 
 
-.job-details__apply-box
-{
-    position: absolute;
-    bottom: 50px;
-    right: 55px;
-    left: 55px;
-}
+
 
 
 
@@ -621,7 +620,7 @@ footer
 .title.ularge{
     margin-bottom: 30px;
     line-height: 1.2;
-    color: #ea1e30 !important;
+    color: $btn-color !important;
 }
 
 .main-article
@@ -637,7 +636,7 @@ div.text > h1, div.text > h2, div.text > h3, div.text > h4{
 #text-security > h2,
 #text-security > h3,
 #text-security > h4{
-    color: #ea1e30 !important;
+    color: $btn-color !important;
 }
 
 
@@ -683,7 +682,7 @@ div.text > ul
 .btn-apply
 {
     border: none;
-    background-color: #EA1E30;
+    background-color: $btn-color;
     height: 50px;
     font-size:18px;
     color: white;
@@ -695,10 +694,16 @@ div.text > ul
 
 @media (max-width: 739px)
 {
+
     .navbar
     {
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    .container-search
+    {
+        padding-bottom: 1px !important;
     }
 
     .banner{
@@ -713,6 +718,8 @@ div.text > ul
         flex-direction: column;
     
     }
+
+   
 
     .banner h1{
         font-size: 34px;
@@ -804,6 +811,7 @@ div.text > ul
     .job-details-wrap
     {
         padding: 0 !important;
+        height: calc(100vh - 79px) !important;
 
     }
 
@@ -812,49 +820,63 @@ div.text > ul
         padding: 0 20px;
       
     }
-    .job-details__information
-    {
-        margin-bottom:20px;
-    }
 
-    .job-details__apply-box
-    {
-        position: absolute;
-        bottom: 0px;
-        width:auto !important;
-        right: 20px;
-        left: 20px;
-    }
+
 }
+
+
+// ---------------------------------formlogin-register------------------------
+.form-submit-btn
+{
+    background-color: $btn-color;
+    color:#fff !important;
+}
+
 
 
 @media (min-width: 740px ) and (max-width: 1023px)
 {
+    .navbar
+    {
+        margin-left: 50px;
+        margin-right:50px;
+    }
+
     #input-search-job
     {
         flex: 2;
     }
+
+
+    #recruiters
+    {
+        padding-bottom: 101px !important;
+    }
+
     .ipad-bt-5
     {
         margin-bottom: 3rem !important;
     }
 
-    .job-details__information
+    .container-search
     {
-        margin-bottom:20px;
+        height: calc(100vh - 86px) !important;
     }
 
-    .job-details__apply-box
+
+    .job-details-wrap
     {
-        position: absolute;
-        bottom: 0px;
-        width:auto !important;
-        right: 20px;
-        left: 20px;
+        height: calc(100vh - 78px) !important;
+   
     }
+
 }
 
 @media (min-width: 1024px)
 {
-    
+    .navbar
+    {
+        margin-left: 80px;
+        margin-right:80px;
+    }
 }

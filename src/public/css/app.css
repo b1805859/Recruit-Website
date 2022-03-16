@@ -859,7 +859,7 @@ select {
 
 .apply-btn {
   height: 40px;
-  background-image: linear-gradient(to right, #6db9ef, #7ce08a);
+  background-image: linear-gradient(to right, #141e30, #243b55);
   padding: 7px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px; }
@@ -869,7 +869,7 @@ select {
   float: right;
   border-radius: 0;
   box-shadow: none !important;
-  background: transparent;
+  background: #EA1E30;
   border: 1px solid #fff; }
 
 .pagelink li {
@@ -906,6 +906,9 @@ select {
   color: #58595b;
   padding: 15px 0; }
 
+.job-details__information {
+  margin-bottom: 20px; }
+
 .job-details__paragraph-title {
   font-size: 23px;
   color: #353535;
@@ -935,12 +938,6 @@ select {
 
 .job-details-wrap {
   position: relative; }
-
-.job-details__apply-box {
-  position: absolute;
-  bottom: 50px;
-  right: 55px;
-  left: 55px; }
 
 footer {
   margin: auto; }
@@ -980,7 +977,7 @@ footer {
 .title.ularge {
   margin-bottom: 30px;
   line-height: 1.2;
-  color: #ea1e30 !important; }
+  color: #EA1E30 !important; }
 
 .main-article {
   padding: 40px; }
@@ -992,7 +989,7 @@ div.text > h1, div.text > h2, div.text > h3, div.text > h4 {
 #text-security > h2,
 #text-security > h3,
 #text-security > h4 {
-  color: #ea1e30 !important; }
+  color: #EA1E30 !important; }
 
 div.text {
   font-size: 16px;
@@ -1030,6 +1027,8 @@ div.text > ul {
   .navbar {
     margin-left: 10px;
     margin-right: 10px; }
+  .container-search {
+    padding-bottom: 1px !important; }
   .banner {
     padding: 40px 15px 60px 15px; }
   .form-search-job1 {
@@ -1079,28 +1078,31 @@ div.text > ul {
     height: auto !important;
     margin-bottom: 20px; }
   .job-details-wrap {
-    padding: 0 !important; }
+    padding: 0 !important;
+    height: calc(100vh - 79px) !important; }
   .job-details {
-    padding: 0 20px; }
-  .job-details__information {
-    margin-bottom: 20px; }
-  .job-details__apply-box {
-    position: absolute;
-    bottom: 0px;
-    width: auto !important;
-    right: 20px;
-    left: 20px; } }
+    padding: 0 20px; } }
+
+.form-submit-btn {
+  background-color: #EA1E30;
+  color: #fff !important; }
 
 @media (min-width: 740px) and (max-width: 1023px) {
+  .navbar {
+    margin-left: 50px;
+    margin-right: 50px; }
   #input-search-job {
     flex: 2; }
+  #recruiters {
+    padding-bottom: 101px !important; }
   .ipad-bt-5 {
     margin-bottom: 3rem !important; }
-  .job-details__information {
-    margin-bottom: 20px; }
-  .job-details__apply-box {
-    position: absolute;
-    bottom: 0px;
-    width: auto !important;
-    right: 20px;
-    left: 20px; } }
+  .container-search {
+    height: calc(100vh - 86px) !important; }
+  .job-details-wrap {
+    height: calc(100vh - 78px) !important; } }
+
+@media (min-width: 1024px) {
+  .navbar {
+    margin-left: 80px;
+    margin-right: 80px; } }
