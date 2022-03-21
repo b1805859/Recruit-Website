@@ -1,12 +1,16 @@
-const site = require('./site');
+const home = require('./home');
 const search = require('./search');
-const footer = require('./footer');
+const information = require('./information');
+const user = require('./user');
+// var auth = require('../../middlewares/auth.js');
+
+
 function route(app)
 {
-
+    app.use('/',user);
     app.use('/search',search);
-    app.use('/footer',footer);
-    app.use('/',site);
+    app.use('/information',information);
+    app.use('/home',home);
     
 }
 

@@ -52,6 +52,21 @@ class JobControllers
 
 
 
+    post(req, res)
+    {
+      res.render('search/post');
+    }
+
+
+    stored(req, res)
+    {
+      const job = req.body
+      const jobs = new Jobs(job);
+      jobs.save()
+      res.redirect("/search/jobs");
+    }
+
+
 }
 
 module.exports = new JobControllers();

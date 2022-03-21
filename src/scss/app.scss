@@ -89,7 +89,7 @@ select{
 
 .content-place
 {
-    margin-top:76px;
+    margin-top:70px;
     padding-bottom: 0;
 }
 
@@ -687,6 +687,46 @@ div.text > ul
     font-size:18px;
     color: white;
 }
+
+
+
+// -------------------------------------form-post-job------------------
+
+.post-wrapper {
+    margin-top:70px;
+    height: auto;
+}
+
+
+.post-form>.form-group >label {
+    display:block !important;
+    max-width:100%;
+    margin-bottom: 5px;
+}
+
+
+#post-form > .form-group > p
+{
+    margin-bottom: 0.2rem !important;
+}
+
+#btn-post-form
+{
+    width:100%;
+    height: 43px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#btn-post-form:hover
+{
+    cursor: pointer;
+}
+
+
+
+
 
 
 

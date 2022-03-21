@@ -5,11 +5,14 @@ mongoose.plugin(slug);
 
 
 const Jobs = new Schema({
-    name: { type: String},
+    namecity: { type: String},
+    namejob:{type:String},
+    email:{type:String},
+    number: {type: Number},
     location: { type: String },
     skill: { type: String},
+    keyword: {type: String},
     description: { type: String },
-    priority: { type: String },
     slug: {type: String, slug:"name"},
     time: {type: String}
 }, {timestamps: true}

@@ -644,7 +644,7 @@ select {
   border-radius: 4px !important; }
 
 .content-place {
-  margin-top: 76px;
+  margin-top: 70px;
   padding-bottom: 0; }
 
 .menu-bar {
@@ -1022,6 +1022,28 @@ div.text > ul {
   height: 50px;
   font-size: 18px;
   color: white; }
+
+.post-wrapper {
+  margin-top: 70px;
+  height: auto; }
+
+.post-form > .form-group > label {
+  display: block !important;
+  max-width: 100%;
+  margin-bottom: 5px; }
+
+#post-form > .form-group > p {
+  margin-bottom: 0.2rem !important; }
+
+#btn-post-form {
+  width: 100%;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#btn-post-form:hover {
+  cursor: pointer; }
 
 @media (max-width: 739px) {
   .navbar {
