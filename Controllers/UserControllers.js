@@ -1,6 +1,5 @@
 
 var jwt = require('jsonwebtoken');
-
 const User = require('../Models/User')
 
 
@@ -11,37 +10,41 @@ class UserControllers
         res.render('login');
     }
 
-    async logined(req, res)
+    logined(req, res)
     {
-        
 
-        try {
-            const { email, password } = req.body
-            const user = await User.findByCredentials(email, password)
-            if (!user) {
-                return res.status(401).send({error: 'Login failed! Check authentication credentials'})
-            }
-            const token = await user.generateAuthToken()
-            res.send({ user, token })
-        } catch (error) {
-            res.status(400).send(error)
-        }
             
+            User.findOne({email: req.body.email, password: req.body.password})
+                .then(data =>{
+                    if(data)
+                    {
+                        var token = jwt.sign({_id : data._id},"mk")
+                        res.cookie('token', token)
+                        res.redirect('/home')
+                    }
+                    else
+                    {
+                        return res.json('that bai')
+                    }
+                })
+                .catch(err => {
+                    console.log(err)
+                    res.status(500).json('loi server')
+                })
             
-        
+ 
     }
 
     register(req, res){
         res.render('register');
     }
 
-    async registered(req, res){
+    registered(req, res){
         
         try {
             const user = new User(req.body)
-            await user.save()
-            const token = await user.generateAuthToken()
-            res.status(201).send({ user, token })
+            user.save()
+            
         } catch (error) {
             res.status(400).send(error)
         }

@@ -3,7 +3,8 @@ var exphbs  = require('express-handlebars');
 var path = require('path');
 var app = express();
 const bp = require('body-parser')
-var jwt = require('jsonwebtoken');
+const port = process.env.PORT;
+
 var router = require('./routes/index.js')
 var connect = require('./config/db/index.js')
 var cookieParser = require('cookie-parser')
@@ -26,17 +27,9 @@ app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 
-
-
-
-
-
 app.use(express.static(path.join(__dirname, '/public')));
 
 
-
-
-  
-
-
-app.listen(3000);
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
