@@ -20,7 +20,7 @@ class UserControllers
                     {
                         var token = jwt.sign({_id : data._id},"mk")
                         res.cookie('token', token)
-                        res.redirect('/home')
+                        res.redirect('/')
                     }
                     else
                     {

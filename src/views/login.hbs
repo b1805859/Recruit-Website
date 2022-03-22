@@ -2,14 +2,10 @@
      <section class="sign-in">
             <div class="container">
                 <div class="signin-content">
-                    <div class="signin-image">
-                        <figure><img src="/img/form/signin-image.jpg" alt="sing up image"></figure>
-                        <a href="/register" class="signup-image-link">Create an account</a>
-                    </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form action="/" method="POST" class="register-form" id="login-form" >
+                        <form action="/login" method="POST" class="register-form" id="login-form" >
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="email" id="email" placeholder="Your email"/>
@@ -24,6 +20,9 @@
                             </div>
                             </div>
                         </form>
+                    </div>
+                    <div class="signin-image">
+                        <a href="/login/register" class="signup-image-link">Create an account</a>
                     </div>
                 </div>
             </div>

@@ -8,10 +8,10 @@ const auth = require('../../middlewares/auth.js');
 
 function route(app)
 {
-    app.use('/',user);
+    app.use('/login',user);
     app.use('/search',auth,search);
     app.use('/information',auth,information);
-    app.use('/home',auth,home);
+    app.use('/',auth,home);
     
 }
 
