@@ -1,26 +1,32 @@
-<div class="main">
-     <section class="sign-in">
-            <div class="container">
-                <div class="signin-content">
-
-                    <div class="signin-form">
-                        <h2 class="form-title">Sign up</h2>
+<div class="wrap-login" style="height: 100vh; position:relative; background-image: linear-gradient(to right, #780206
+, #061161);">
+     <section class="sign-in" style="
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width:500px;
+    background-color:#fff;
+    transform: translate(-50%, -50%);
+">
+            <div class="container text-center" style="padding: 40px;">
+                    <div class="signin-form" >
+                        <h2 class="form-title" style="
+                                padding-top: 10px;
+                                padding-bottom: 20px;
+                        ">Đăng nhập</h2>
                         <form action="/login" method="POST" class="register-form" id="login-form" >
                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="email" id="email" placeholder="Your email"/>
+                                <input type="text" name="email" id="email" placeholder="Your email" style="width: 250px;"/>
                             </div>
                             <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="password" id="password" placeholder="Password"/>
+                                <input type="password" name="password" id="password" placeholder="Password" style="width: 250px;"/>
                             </div>
                             
                             <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit-btn" value="Đăng nhập"/>
+                                <input type="submit" name="signin" id="signin" class="form-submit-btn" value="Đăng nhập" style="padding: 5px 25px;"/>
                             </div>
                             </div>
                         </form>
-                    </div>
                     <div class="signin-image">
                         <a href="/login/register" class="signup-image-link">Create an account</a>
                     </div>
@@ -28,4 +34,8 @@
             </div>
         </section>
 </div>
+
+
+
+
 

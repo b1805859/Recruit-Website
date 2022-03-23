@@ -5,6 +5,7 @@ const searchControllers = require('../../Controllers/JobControllers')
 
 router.get('/:id/detail', searchControllers.detail);
 router.get('/:id/apply', searchControllers.apply);
+router.post('/:id/applied', searchControllers.applied);
 router.get('/jobs/:location/:keyword',searchControllers.locationkeyword);
 router.get('/jobs/:location',searchControllers.location);
 router.get('/post',searchControllers.post);

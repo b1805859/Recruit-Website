@@ -9,36 +9,45 @@
         <div class="apply-content-title">
             <h1 style="text-align: center">{{Job.namejob}}</h1>
         </div>
-        <form class="apply-form col-md-12 px-3">
-            <div class="row mt-4">
-                <label for="" class="col-sm-2 mt-3">Tên:</label>
-                <div class="col-sm-10">
+        <form method="POST" action="/search/{{Job._id}}/applied" class="apply-form col-md-12 px-3">
+            <div class="row mt-4 align-items-center">
+                <label for="" class="col-sm-2 mt-2">Tên:</label>
+                <div class="col-sm-10 search-form-keyword">
                     <input required="required" maxlength="50" placeholder="Nhập tên đầy đủ của bạn" 
                     data-msg="Không được để trống" data-job-applications--new-target="name" size="50"
-                    type="text" name="" id="">
+                    type="text" name="apply-user-name" id="apply-user-name" class="apply-value w-50">
                 </div>
             </div>
 
-            <div class="row mt-4">
-                <label class="col-sm-2 mt-3" for="job_application_email">Email:</label>
-                <div class="col-sm-10">
+            <div class="row mt-4 align-items-center">
+                <label class="col-sm-2 mt-2" for="job_application_email">Email:</label>
+                <div class="col-sm-10 search-form-keyword">
                     <input required="required" placeholder="Nhập email của bạn"
                     data-rule-email="true" data-rule-noplus="true" data-msg-required="Không được để trống" 
                     data-msg-email="Địa chỉ email không hợp lệ" data-msg-noplus="Địa chỉ email không hợp lệ" 
-                    data-job-applications--new-target="email" type="text" name="" id="" class="is-invalid"  ><div id="job_application_email-error" class="invalid-feedback">Không được để trống</div>
+                    data-job-applications--new-target="email" type="text" name="apply-user-email" id="apply-user-email" class="apply-value w-50"  >
                 </div>
             </div>
 
-            <div class="row mt-4">
-                <label class="col-sm-2 mt-4" for="job_application_cv_local">CV:</label>
-                <div class="col-sm-10">
-                    <input class="cv_input_field_field" required="required" accept="application/msword,application/pdf,application/x-ole-storage,application/vnd.openxmlformats-officedocument.wordprocessingml.document" data-rule-filesize="1048576" data-msg-filesize="Giới hạn 1MB" data-rule-minfilesize="1" data-msg-minfilesize="Your CV is empty. Please try again!" data-rule-accept="application/msword,application/pdf,application/x-ole-storage,application/vnd.openxmlformats-officedocument.wordprocessingml.document" data-msg-accept="Chỉ hỗ trợ định dạng .doc .docx .pdf" data-msg="Không được để trống" data-job-applications--new-target="fileField" data-action="change->job-applications--new#uploadNewCv" type="file" name="job_application[cv_local]" id="job_application_cv_local">
-                    <div class="small form-text">Hỗ trợ định dạng .doc .docx .pdf, không chứa mật khẩu bảo vệ, dung lượng dưới 1 MB</div>
+              <div class="row mt-4 align-items-center">
+                <label class="col-sm-2 mt-2" for="job_application_email">SĐT:</label>
+                <div class="col-sm-10 search-form-keyword">
+                    <input required="required" placeholder="Nhập email của bạn"
+                    data-rule-email="true" data-rule-noplus="true" data-msg-required="Không được để trống" 
+                    data-msg-email="Địa chỉ email không hợp lệ" data-msg-noplus="Địa chỉ email không hợp lệ" 
+                    data-job-applications--new-target="email" type="text" name="apply-user-number" id="apply-user-number" class="apply-value w-50"  >
+                </div>
+            </div>
+
+            <div class="row mt-4 align-items-center">
+                <label class="col-sm-2 mt-2" for="job_application_cv_local">CV:</label>
+                <div class="col-sm-10 search-form-keyword">
+                    <input  required="required" placeholder="Copy link CV dán vào đây" class="apply-value w-100">
                 </div>
             </div>
 
            <div class="actions d-grid mt-5">
-                <button class="btn-apply btn-block send_now" style="border-radius:4px" data-disable-with="Saving..." type="submit">Gửi CV của tôi</button>
+                <button class="btn-apply btn-block send_now apply-value" style="border-radius:4px" data-disable-with="Saving..." type="submit">Gửi CV của tôi</button>
             </div>
         </form>
     </div>

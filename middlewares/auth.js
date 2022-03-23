@@ -7,8 +7,13 @@ const auth = async(req, res, next) => {
     try {
         var token = req.cookies.token
         var result = jwt.verify(token,'mk')
-        if(result)
+
+        const user = await User.findOne({_id: result._id});
+
+        if(user)
         {
+            req.user = user
+            req.token = token
             next()
         }
     } catch (error) {

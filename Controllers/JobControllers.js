@@ -1,3 +1,4 @@
+var nodemailer =  require('nodemailer');
 const Jobs = require('../Models/Jobs')
 const {mutipleMongooseToObject, singleToObject} = require('../src/util/mongoose')
 
@@ -9,7 +10,7 @@ class JobControllers
   home(req, res, next) {
     Jobs.find()
       .then(Jobs=>{
-        res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs)});
+        res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs),username: req.user.name});
       })
       .catch(next);
     }
@@ -17,7 +18,7 @@ class JobControllers
     location(req, res, next) {
     Jobs.find({location: req.params.location})
       .then(Jobs=>{
-        res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs)});
+        res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs),username: req.user.name});
       })
       .catch(next);
     }
@@ -25,7 +26,7 @@ class JobControllers
     locationkeyword(req, res, next) {
       Jobs.find({keyword: req.params.keyword , location: req.params.location})
         .then(Jobs=>{
-          res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs)});
+          res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs),username: req.user.name});
         })
         .catch(next);
       }
@@ -34,7 +35,7 @@ class JobControllers
     {
       Jobs.findById({_id: req.params.id})
         .then(Job=>{
-          res.render('search/detail',{Job: singleToObject(Job)});
+          res.render('search/detail',{Job: singleToObject(Job),username: req.user.name});
         })
       
     }
@@ -44,9 +45,15 @@ class JobControllers
     {
       Jobs.findOne({_id: req.params.id})
         .then(Job => {
-            res.render('search/apply',{Job: singleToObject(Job)});
+            res.render('search/apply',{Job: singleToObject(Job),username: req.user.name});
         })
+
           
+      
+    }
+
+    applied(req,res)
+    {
       
     }
 
@@ -54,7 +61,7 @@ class JobControllers
 
     post(req, res)
     {
-      res.render('search/post');
+      res.render('search/post',{username: req.user.name});
     }
 
 

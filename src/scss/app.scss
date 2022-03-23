@@ -1,18 +1,4 @@
 @import 'veriables';
-//Common
-@import 'common/extend.scss';
-@import 'common/fonts.scss';
-@import 'common/minxi.scss';
-@import 'common/variables.scss';
-@import 'common/global.scss';
-
-//layout
-@import 'layouts/main.scss';
-
-// Responsive
-@import 'layouts/responsive.scss';
-
-
 
 *
 {
@@ -65,6 +51,7 @@ select
 input:focus, 
 select:focus
 {
+    color:#000000 !important;
     border: 1px solid rgba(228, 35, 35, 0.5) !important;
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
@@ -91,6 +78,7 @@ select{
 {
     margin-top:70px;
     padding-bottom: 0;
+    height: calc(100vh - 70px - 234px);
 }
 
 
@@ -316,7 +304,14 @@ select{
 
 
 .search-form__keyword-input,
-.form-control-combobox
+.form-control-combobox,
+.post-name,
+.post-name-job ,
+.post-email ,
+.post-number ,
+.post-time ,
+.post-key,
+.apply-value 
 {
     height:100%;
     font-size: 15px;
@@ -729,6 +724,72 @@ div.text > ul
 
 
 
+// ---------------------------------formlogin-register------------------------
+
+.wrap-login
+{
+   
+}
+
+.sign-in
+{
+
+}
+
+.signin-form
+{
+
+}
+
+.form-title
+{
+
+}
+
+.register-form
+{
+
+}
+
+.form-submit-btn
+{
+
+}
+
+.signin-image
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-submit-btn
+{
+    background-color: $btn-color;
+    color:#fff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // -------------------------------Responsive-------------------------------
 
@@ -865,12 +926,7 @@ div.text > ul
 }
 
 
-// ---------------------------------formlogin-register------------------------
-.form-submit-btn
-{
-    background-color: $btn-color;
-    color:#fff !important;
-}
+
 
 
 
