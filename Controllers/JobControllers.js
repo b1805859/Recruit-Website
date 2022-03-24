@@ -1,4 +1,4 @@
-var nodemailer =  require('nodemailer');
+
 const Jobs = require('../Models/Jobs')
 const {mutipleMongooseToObject, singleToObject} = require('../src/util/mongoose')
 
@@ -8,28 +8,28 @@ class JobControllers
 
 
   home(req, res, next) {
-    Jobs.find()
+    
+    
+    return req.body.keyword ?
+    ( 
+      Jobs.find({keyword:/req.body.keyword/, location:req.body.location})
       .then(Jobs=>{
         res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs),username: req.user.name});
       })
-      .catch(next);
-    }
-
-    location(req, res, next) {
-    Jobs.find({location: req.params.location})
+      .catch(next)
+    ) : 
+    (
+      Jobs.find({ location:req.body.location})
       .then(Jobs=>{
         res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs),username: req.user.name});
       })
-      .catch(next);
+      .catch(next)
+    )
+
+  
     }
 
-    locationkeyword(req, res, next) {
-      Jobs.find({keyword: req.params.keyword , location: req.params.location})
-        .then(Jobs=>{
-          res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs),username: req.user.name});
-        })
-        .catch(next);
-      }
+
 
     detail(req, res, next)
     {
@@ -55,6 +55,26 @@ class JobControllers
     applied(req,res)
     {
       
+        Jobs.updateOne(
+          {_id : req.params.id},
+          {
+            $push: {
+              user_apply:{
+                userEmail : req.body.userEmail,
+                userNumber : req.body.userNumber,
+                userLinkCV: req.body.linkCV
+              }
+            }
+          }, 
+          (err,result)=>{
+            if(err){
+              console.log(err);
+              res.status(400).send('Error')
+            }else{
+              res.status(200).send(result);
+            }
+          }
+        );
     }
 
 

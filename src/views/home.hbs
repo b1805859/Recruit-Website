@@ -8,16 +8,16 @@
     <div data-aos="fade-up">
         <h1>2,786 Việc Làm IT Cho Developer Chất</h1>
         <div class="search-job text-center">
-            <form method="GET" name="form-search-job" class="form-search-job1" style="    
+            <form action="/search/jobs" method="POST" name="form-search-job" class="form-search-job1" style="    
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
             ">
             
-                <input type="text" name="query"  value="" id="input-search-job" class="search-form__keyword-input height-40 border-radius4 " autocomplete="off"
+                <input type="text" name="keyword"  value="" id="input-search-job" class="search-form__keyword-input height-40 border-radius4 " autocomplete="off"
                             placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty..." data-search--autocomplete-target="query" data-action="search--autocomplete#toggleClearButton">
-                <select id="form-search-location" class="form-search-combobox height-40 border-radius4 ">
+                <select id="form-search-location" name="location" class="form-search-combobox height-40 border-radius4 ">
                                     <option value="Ho Chi Minh">Ho Chi Minh</option>
                                     <option value="Ha Noi">Ha Noi</option>
                                     <option value="Da Nang">Da Nang</option>
@@ -161,51 +161,3 @@
         {{> footer}}
 </footer>
 
-
-<script>
-    document.addEventListener("DOMContentLoaded", ()=>{
-        var formSearch = document.forms['form-search-job'];
-        var btnSearch = document.getElementById('btn-search-job');
-        var inputSearch = document.getElementById('input-search-job');
-        var combobox = document.getElementById("form-search-location");
-
-        btnSearch.onclick = function()
-        {
-            var inputSearchValue = inputSearch.value;
-            var comboboxValue = combobox.value;
-                
-                if(inputSearchValue==="")
-                {  
-                    if(comboboxValue.includes("Others"))
-                    {
-                        formSearch.action = "search/jobs/";
-                        formSearch.submit();
-                    }
-                    else
-                    {
-                        formSearch.action = "search/jobs/" + comboboxValue;
-                        formSearch.submit();
-                    } 
-                }
-                else
-                {
-
-                    if(comboboxValue.includes("Others"))
-                    {
-                        formSearch.action = "search/jobs/" + inputSearchValue;
-                        formSearch.submit();
-                    }
-                    else
-                    {
-                        formSearch.action = "search/jobs/" +comboboxValue+ "/" +inputSearchValue ;
-                        formSearch.submit();
-                        
-                    } 
-                }
-
-            
-        }
-        
-
-    });
-</script>

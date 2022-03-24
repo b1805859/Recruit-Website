@@ -3,7 +3,9 @@ var exphbs  = require('express-handlebars');
 var path = require('path');
 var app = express();
 const bp = require('body-parser')
-var nodemailer =  require('nodemailer');
+
+var methodOverride = require('method-override')
+app.use(methodOverride('_method'))
 const port = process.env.PORT;
 
 var router = require('./routes/index.js')
