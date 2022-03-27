@@ -9,6 +9,7 @@ router.put('/:id/applied', searchControllers.applied);
 router.get('/post',searchControllers.post);
 router.post('/post',searchControllers.stored);
 router.post('/jobs',searchControllers.home);
+router.get('/jobs',searchControllers.homeheader);
 
 
 module.exports = router

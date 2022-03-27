@@ -6,13 +6,13 @@
 <div class="container container-search" style="height: calc(100vh - 88px)">
     <div class="search-header">
         <div class="search-form-wrapper">
-               <form name="search-form--job" action="/search/jobs" method="POST" class="search-form d-flex justify-content-start">
-                    <div class="search-form-keyword">
-                        <input type="text" name="keyword" id="search_text--navbar" value="" class="search-form__keyword-input" autocomplete="off"
+               <form name="search-form--job" action="/search/jobs" method="POST" class="search-form d-flex align-items-center justify-content-start">
+                    <div class="search-form-keyword mr-4">
+                        <input type="text" name="keyword" id="search_text--navbar" value="" class="search-form__keyword-input border-radius4 " autocomplete="off"
                         placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty..." data-search--autocomplete-target="query" data-action="search--autocomplete#toggleClearButton">
                     </div>
                     <div class="search-form-location">
-                        <select id="form-select" name="location" class="form-control-combobox">
+                        <select id="form-select" name="location" class="form-control-combobox border-radius4 mr-4">
                             <option value="Ho Chi Minh">Ho Chi Minh</option>
                             <option value="Ha Noi">Ha Noi</option>
                             <option value="Da Nang">Da Nang</option>
@@ -38,18 +38,18 @@
         <div class="container jobs-overlow">
             <h5>RECENT UPDATES</h5>
 
-            <div data-aos="fade-left">
+            <div data-aos="fade-left" data-aos-duration="800">
                 {{#each Jobs}}
-                        <div class="company-details">
+                        <div class="company-details" style="box-shadow: 2.7px 5.4px 5.4px hsl(0deg 0% 0% / 0.42);">
                             <div class="job-update">
                                 <h4><b>{{this.namejob}}</b></h4>
                                 <i class="fa fa-briefcase"></i><span>{{this.time}}</span><br>
                                 <i class="fa fa-solid fa-location-dot"></i><span>{{this.location}}</span>
-                                <p class="mt-2">Skills: {{this.keyword}}</p>
+                                <p class="mt-2">Từ khóa: {{this.keyword}}</p>
                                 <p class="mt-1"
                                     style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"
                                 >
-                                    Description: {{this.description}}
+                                    Mô tả: {{this.description}}
                                 </p>
                             </div>
 

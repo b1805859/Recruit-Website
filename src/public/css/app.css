@@ -9,6 +9,17 @@ body {
 a {
   text-decoration: none !important; }
 
+input[type=text], input[type=email]:focus, input[type=password]:focus, textarea, select {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #DDDDDD; }
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 10px #51cbee; }
+
 .height-40 {
   height: 40px !important; }
 
@@ -16,32 +27,6 @@ a {
   box-shadow: none !important;
   background: none !important;
   border-radius: 0 !important; }
-
-input {
-  border: 1px solid #333 !important;
-  color: #999 !important;
-  border-radius: 4px; }
-
-select {
-  border: 1px solid #333 !important;
-  border-radius: 4px;
-  color: #495057;
-  margin: 0 15px !important; }
-
-input:focus,
-select:focus {
-  color: #000000 !important;
-  border: 1px solid rgba(228, 35, 35, 0.5) !important;
-  -webkit-background-clip: padding-box;
-  /* for Safari */
-  background-clip: padding-box;
-  /* for IE9+, Firefox 4+, Opera, Chrome */ }
-
-input:focus::placeholder {
-  color: transparent; }
-
-select {
-  -webkit-appearance: auto !important; }
 
 .border-radius4 {
   border-radius: 4px !important; }
@@ -84,7 +69,7 @@ select {
 
 .banner {
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/banner/banner.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/banner/banner.jpg);
   background-size: 100% 100%;
   background-position: center;
   color: #fff;
@@ -239,7 +224,6 @@ select {
   overflow: hidden; }
 
 .company-details {
-  box-shadow: 0 2px 70px 0 rgba(110, 130, 208, 0.18);
   border-radius: 5px;
   margin-bottom: 20px; }
 
@@ -301,7 +285,7 @@ select {
   color: #29b929; }
 
 .job-details {
-  margin-top: 76px;
+  margin-top: 70px;
   position: relative; }
 
 .job-details__header,
@@ -438,11 +422,6 @@ div.text > ul {
   margin-top: 70px;
   height: auto; }
 
-.post-form > .form-group > label {
-  display: block !important;
-  max-width: 100%;
-  margin-bottom: 5px; }
-
 #post-form > .form-group > p {
   margin-bottom: 0.2rem !important; }
 
@@ -455,6 +434,26 @@ div.text > ul {
 
 #btn-post-form:hover {
   cursor: pointer; }
+
+.wrap-login,
+.wrap-register {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/banner/banner1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.sign-in,
+.sign-up {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 500px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 10px; }
 
 .form-submit-btn {
   background-color: #EA1E30;

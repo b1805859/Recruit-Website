@@ -42,8 +42,20 @@ class UserControllers
     registered(req, res){
         
         try {
-            const user = new User(req.body)
-            user.save()
+            User.findOne({email: req.body.email})
+            .then(data =>{
+                if(data==null)
+                {
+                    const user = new User(req.body)
+                    user.save()
+                    res.redirect('/login')
+                }
+                else
+                {
+                    res.json("Tai khoan da ton tai");
+                }
+            })
+            
             
         } catch (error) {
             res.status(400).send(error)

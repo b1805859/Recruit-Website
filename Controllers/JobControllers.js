@@ -6,17 +6,26 @@ class JobControllers
 {
    
 
+  homeheader(req,res, next)
+  {
+    Jobs.find({})
+      .then(Jobs=>{
+        res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs),username: req.user.name});
+      })
+      .catch(next)
+  }
 
   home(req, res, next) {
     
     
     return req.body.keyword ?
     ( 
-      Jobs.find({keyword:/req.body.keyword/, location:req.body.location})
+      Jobs.find({keyword:{ $regex: '.*' + `${req.body.keyword}`+ '.*',$options: 'i'}, location:req.body.location})
       .then(Jobs=>{
         res.render('search/jobs',{Jobs: mutipleMongooseToObject(Jobs),username: req.user.name});
       })
       .catch(next)
+  
     ) : 
     (
       Jobs.find({ location:req.body.location})
@@ -86,7 +95,7 @@ class JobControllers
 
 
     stored(req, res)
-    {
+    { let city ="Ho Chi Minh";
       const job = req.body
       const jobs = new Jobs(job);
       jobs.save()
