@@ -15,6 +15,7 @@ const Jobs = new Schema({
     description: { type: String },
     slug: {type: String, slug:"name"},
     time: {type: String},
+    id_user:{type:String},
     user_apply:[
         {   userMail:{type: String},
             userNumber:{type: Number},

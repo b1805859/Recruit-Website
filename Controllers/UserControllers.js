@@ -1,6 +1,7 @@
 
 var jwt = require('jsonwebtoken');
 const User = require('../Models/User')
+const Job = require('../Models/Jobs')
 
 
 class UserControllers
@@ -61,6 +62,9 @@ class UserControllers
             res.status(400).send(error)
         }
     }
+
+
+  
 
 
 }

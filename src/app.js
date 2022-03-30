@@ -13,7 +13,11 @@ var router = require('./routes/index.js')
 var connect = require('./config/db/index.js')
 var cookieParser = require('cookie-parser')
 
-var hbs = exphbs.create({extname: '.hbs'});
+var hbs = exphbs.create({extname: '.hbs',
+  helpers: {
+      sum(a,b) {return a+b}
+  }
+});
 
 app.use(cookieParser())
 

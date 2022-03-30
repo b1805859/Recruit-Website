@@ -14,7 +14,7 @@ body
 
 
 ::-webkit-scrollbar {
-    display: none; !important
+    display: none; 
 }
 
 a{
@@ -758,8 +758,14 @@ div.text > ul
 
 
 
-
-
+// -------------------------------------------manager-userpost-----------------------------------------------------
+.table-content
+{
+    height: calc( 100vh - 70px);
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
 
 
 

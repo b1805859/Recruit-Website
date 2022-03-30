@@ -95,8 +95,9 @@ class JobControllers
 
 
     stored(req, res)
-    { let city ="Ho Chi Minh";
+    { 
       const job = req.body
+      job.id_user = req.user._id
       const jobs = new Jobs(job);
       jobs.save()
       res.redirect("/search/jobs");

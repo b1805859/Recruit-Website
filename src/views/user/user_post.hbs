@@ -1,0 +1,38 @@
+<section id="header">
+        {{> header}}
+    </section>
+
+
+<div class="table-content">
+
+            <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col" class="text-center">Tên công việc</th>
+            <th scope="col" class="text-center">Ngày đăng</th>
+            <th scope="col" class="text-center">Xử lý</th>
+            </tr>
+        </thead>
+        <tbody>
+           {{#each Jobs}}
+                 <tr>
+                    <th scope="row">{{sum @index 1}}</th>
+                    <td class="text-center">{{this.namejob}}</td>
+                    <td class="text-center">{{this.createdAt}}</td>
+                    <td class="text-center">
+                        <a href="/{{this._id}}/edit_post_page">Sửa</a> |
+                        <a href="/{{this._id}}/delete_post">Xóa</a> |
+                        <a href="/search/{{this._id}}/detail">Xem chi tiết</a>
+                    </td>
+                </tr>
+           {{/each}}
+        </tbody>
+        </table>
+</div>
+
+
+
+<footer>
+        {{> footer}}
+</footer>
