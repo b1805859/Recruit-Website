@@ -1,0 +1,55 @@
+<div class="edit-wrapper">
+    <div class="container post-container" style="background-color:#fff !important; padding: 50px 100px 178px ;">
+        <h2 class="text-center mb-5">Vui lòng điền đầy đủ thông tin</h2>
+            <form method="POST" action="/manager/{{Job._id}}/edit?_method=PUT" id="post-form" >
+                    <div class="form-group my-3">
+                        <p><b>Nhập tên:</b></p>
+                        <input type="text" id="input-name" class="post-name w-50" name="namecity" value="{{Job.namecity}}" autocomplete="off" >
+                    </div>
+                      <div class="form-group my-3">
+                        <p><b>Nhập tên công việc:</b></p>
+                        <input type="text" id="input-name" class="post-name-job w-50" name="namejob" value="{{Job.namejob}}" autocomplete="off" >
+                    </div>
+                    <div class="form-group my-3">
+                        <p><b>Nhập email:</b></p>
+                        <input type="text" id="input-email" class="post-email w-50" name="email" value="{{Job.email}}" autocomplete="off" >
+                    </div>
+                    <div class="form-group my-3">
+                        <p><b>Nhập số điện thoai:</b></p>
+                        <input type="text" id="input-number" class="post-number w-50" name="number" value="0{{Job.number}}" autocomplete="off" >
+                    </div>
+                    <div class="form-group my-4">
+                         <p style="display:inline-block;"><b>Chọn địa điểm:</b></p>
+                         <select id="form-post-location" name="location" class="form-search-combobox height-40 border-radius4 " style="border:1px solid #DDDDDD">
+                                    <option value="Ho Chi Minh">Ho Chi Minh</option>
+                                    <option value="Ha Noi">Ha Noi</option>
+                                    <option value="Da Nang">Da Nang</option>
+                                    <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group my-3">
+                        <p><b>Nhập thời gian:</b></p>
+                        <input type="text" id="input-time" name="time" class="post-time w-50" value="{{Job.time}}" autocomplete="off" >
+                    </div>
+                    <div class="form-group my-3">
+                        <p><b>Nhập từ khóa liên quan:</b></p>
+                        <input type="text" id="input-time" name="keyword" class="post-key w-50" value="{{Job.keyword}}" autocomplete="off" >
+                    </div>
+                    <div class="form-group my-3">
+                        <p><b>Nhập mô tả công việc:</b></p>
+                        <textarea id="input-" rows="12" cols="50" class="w-100" name="description" autocomplete="off"  style="padding:10px">{{Job.description}}</textarea>
+                    </div>
+                    <div class="form-group my-3">
+                        <p><b>Nhập yêu cầu công việc:</b></p>
+                        <textarea id="input-" rows="12" cols="50" class="w-100" name="skill" autocomplete="off"  style="padding:10px">{{Job.skill}}</textarea>
+                    </div>
+                    <div class="form-group mt-5">
+                        <button type="submit" id="btn-post-form" class="search-form-submit">
+                            <div class="search-form-submit-icon">
+                                Cập nhật
+                            </div>
+                        </button>
+                    </div>
+            </form>
+    </div>
+</div>

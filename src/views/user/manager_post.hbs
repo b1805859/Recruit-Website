@@ -6,7 +6,7 @@
 <div class="container container-search" style="height: calc(100vh - 88px)">
     <div class="search-header">
         <div class="search-form-wrapper">
-               <form name="search-form--job" action="/search/jobs" method="POST" class="search-form d-flex align-items-center justify-content-start">
+               <form name="search-form--job" action="/manager/search_jobs" method="POST" class="search-form d-flex align-items-center justify-content-start">
                     <div class="search-form-keyword mr-4">
                         <input type="text" name="keyword" id="search_text--navbar" value="" class="search-form__keyword-input border-radius4 " autocomplete="off"
                         placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty..." data-search--autocomplete-target="query" data-action="search--autocomplete#toggleClearButton">
@@ -54,9 +54,10 @@
                             </div>
 
                             <div class="apply-btn">
-                                <button type="button" class="btn btn-primary mr-2"><a href="/search/{{this._id}}/detail" style="color:#fff">Read more</a></button>
-                                <button type="button" id="btn-apply" class="btn btn-primary mr-3" >
-                                    <a href="/search/{{this._id}}/apply" style="color: #fff !important">Apply</a>
+                                <button type="button" class="btn btn-primary mr-2"><a href="/manager/{{this._id}}/detail" style="color:#fff">Xem chi tiết</a></button>
+                                <button type="button" class="btn btn-primary mr-2"><a href="/manager/{{this._id}}/delete" style="color:#fff">Xóa</a></button>
+                                <button type="button" id="btn-apply" class="btn btn-primary mr-2" >
+                                    <a href="/manager/{{this._id}}/edit" style="color: #fff !important">Sửa</a>
                                 </button>
                             </div>
                         </div>

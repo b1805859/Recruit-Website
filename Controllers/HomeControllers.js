@@ -11,21 +11,22 @@ class HomeControllers
     logout(req, res)
     {
         res.clearCookie("token");
-        res.redirect('/');
+        res.redirect('/login');
         res.end();
     }
 
-    manager(req, res)
+    async manager_post(req, res)
     {
         
           
-              Job.find({id_user: req.user._id})
+            await  Job.find({id_user: req.user._id})
                   .then(data =>{
                       res.render('user/user_post',{Jobs: mutipleMongooseToObject(data)})
                   })
          
       
     }
+    
     async delete_post(req, res)
     {
         await Job.deleteOne({ _id: req.params.id })
@@ -54,6 +55,8 @@ class HomeControllers
        
               
     }
+
+
 }
 
 module.exports = new HomeControllers();

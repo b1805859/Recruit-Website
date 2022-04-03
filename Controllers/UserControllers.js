@@ -2,7 +2,7 @@
 var jwt = require('jsonwebtoken');
 const User = require('../Models/User')
 const Job = require('../Models/Jobs')
-
+const {mutipleMongooseToObject} = require('../src/util/mongoose.js')
 
 class UserControllers
 {
@@ -63,6 +63,10 @@ class UserControllers
         }
     }
 
+    
+
+
+ 
 
   
 

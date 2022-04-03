@@ -11,7 +11,8 @@ const checkRole =  async (req, res, next) =>{
         }
         else
         {
-            res.render('home');
+            
+             res.redirect('/manager/');
         }
 
     }catch
