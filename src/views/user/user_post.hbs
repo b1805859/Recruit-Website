@@ -14,13 +14,14 @@
             <th scope="col" class="text-center">Xử lý</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
            {{#each Jobs}}
                  <tr>
                     <th scope="row">{{sum @index 1}}</th>
                     <td class="text-center">{{this.namejob}}</td>
                     <td class="text-center">{{this.createdAt}}</td>
                     <td class="text-center">
+                        <a href="/{{this._id}}/user_apply_page">Số người nộp đơn</a> |
                         <a href="/{{this._id}}/edit_post_page">Sửa</a> |
                         <a href="/{{this._id}}/delete_post">Xóa</a> |
                         <a href="/search/{{this._id}}/detail">Xem chi tiết</a>

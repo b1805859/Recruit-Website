@@ -1,0 +1,39 @@
+<section id="header">
+        {{> header}}
+    </section>
+
+
+<div class="table-content">
+
+            <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col" class="text-center">Email</th>
+            <th scope="col" class="text-center">Số điện thoại</th>
+            <th scope="col" class="text-center">Link CV</th>
+            <th scope="col" class="text-center">Xử lý</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white">
+           {{#each Job.user_apply}}
+                 <tr>
+                    <th scope="row">{{sum @index 1}}</th>
+                    <td class="text-center">{{this.userEmail}}</td>
+                    <td class="text-center">0{{this.userNumber}}</td>
+                    <td class="text-center">{{this.userLinkCV}}</td>
+          
+                    <td class="text-center">  
+                        <a href="/{{../Job._id}}/{{this._id}}/delete_user_apply">Xóa</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+        </table>
+</div>
+
+
+
+<footer>
+        {{> footer}}
+</footer>

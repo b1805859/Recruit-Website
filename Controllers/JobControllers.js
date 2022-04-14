@@ -64,6 +64,7 @@ class JobControllers
     applied(req,res)
     {
       
+      
         Jobs.updateOne(
           {_id : req.params.id},
           {
@@ -80,7 +81,7 @@ class JobControllers
               console.log(err);
               res.status(400).send('Error')
             }else{
-              res.status(200).send(result);
+              res.redirect('/search/jobs')
             }
           }
         );

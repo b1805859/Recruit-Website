@@ -1,5 +1,6 @@
 const {mutipleMongooseToObject, singleToObject} = require('../src/util/mongoose.js')
 const Job = require('../Models/Jobs');
+const { find } = require('../Models/Jobs');
 class HomeControllers
 {
     home(req, res)
@@ -56,6 +57,39 @@ class HomeControllers
               
     }
 
+
+    
+    async manager_user_apply(req, res) {
+  
+        await Job.findOne({_id: req.params.id})
+                .then(data =>
+                        {    
+                             req.idjob = data._id;
+                             res.render('user/manager_user_apply',{ Job:singleToObject(data)})
+                            
+                        }
+                    )
+    }
+
+    delete_user_apply(req, res)
+    {
+        
+        Job.findOneAndUpdate({_id: req.params.job},{
+            $pull: {
+                user_apply:{_id : req.params.id}
+              }
+        },
+        (err,result)=>{
+            if(err){
+              console.log(err);
+              res.status(400).send('Error')
+            }else{
+              res.redirect('/search/jobs')
+            }
+          }
+        )
+            
+    }
 
 }
 
