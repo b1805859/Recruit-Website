@@ -55,7 +55,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, tex
   margin: 2px; }
 
 .navbar {
-  padding: 0.5rem 20.5rem !important; }
+  padding: 0.5rem 8rem !important; }
 
 .navbar-nav {
   text-align: right; }

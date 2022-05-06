@@ -48,6 +48,7 @@ class UserControllers
                 if(data==null)
                 {
                     const user = new User(req.body)
+                    user.role='0'
                     user.save()
                     res.redirect('/login')
                 }
