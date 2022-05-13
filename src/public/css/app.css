@@ -12,15 +12,23 @@ body {
 a {
   text-decoration: none !important; }
 
-input[type=text], input[type=email]:focus, input[type=password]:focus, textarea, select {
-  -webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  -ms-transition: all 0.30s ease-in-out;
-  -o-transition: all 0.30s ease-in-out;
+input[type='text'],
+input[type='email']:focus,
+input[type='password']:focus,
+textarea,
+select {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   outline: none;
-  border: 1px solid #DDDDDD; }
+  border: 1px solid #dddddd; }
 
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus, select:focus {
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+textarea:focus,
+select:focus {
   box-shadow: 0 0 10px #51cbee; }
 
 .height-45 {
@@ -133,7 +141,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, tex
 
 .top-company {
   color: #333;
-  border: 1px solid #D8D8D8;
+  border: 1px solid #d8d8d8;
   display: block;
   padding: 20px;
   background: white;
@@ -160,7 +168,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, tex
 
 .top-company__location {
   margin-top: 20px;
-  color: #EA1E30; }
+  color: #ea1e30; }
 
 .container-search {
   margin-top: 118px; }
@@ -186,7 +194,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, tex
 .post-name-job,
 .post-email,
 .post-number,
-.post-time,
+.post-money,
 .post-key,
 .apply-value {
   height: 100%;
@@ -242,11 +250,10 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, tex
 .job-update {
   background: #fff;
   padding: 10px 20px;
-  border-radius: 5px; }
-
-.job-update {
   color: #333333e8;
-  font-size: 14; }
+  font-size: 14;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
 
 .job-update .fa,
 .job-details .fa {
@@ -286,7 +293,8 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, tex
   display: inline-block;
   cursor: pointer; }
 
-.pagelink li:hover, .active {
+.pagelink li:hover,
+.active {
   color: #fff;
   background-color: linear-gradient(to right, #6db9ef, #7ce08a); }
 
@@ -392,7 +400,10 @@ footer {
 .main-article {
   padding: 40px; }
 
-div.text > h1, div.text > h2, div.text > h3, div.text > h4 {
+div.text > h1,
+div.text > h2,
+div.text > h3,
+div.text > h4 {
   font-weight: 400; }
 
 #text-security > h1,
@@ -471,7 +482,7 @@ div.text > ul {
   border-radius: 10px; }
 
 .table-content {
-  height: calc( 100vh - 70px);
+  height: calc(100vh - 70px);
   margin-top: 200px;
   margin-left: 200px;
   margin-right: 200px; }
