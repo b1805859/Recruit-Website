@@ -16,6 +16,7 @@ const Jobs = new Schema(
     slug: { type: String, slug: 'name' },
     money: { type: String },
     id_user: { type: String },
+    approve: { type: Boolean, default: 'false' },
     user_apply: [
       {
         userEmail: { type: String },
