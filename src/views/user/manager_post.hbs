@@ -1,5 +1,5 @@
 <section id="header">
-        {{> header}}
+        {{> header_manager}}
     </section>
 
 
@@ -16,7 +16,6 @@
                             <option value="Ho Chi Minh">Ho Chi Minh</option>
                             <option value="Ha Noi">Ha Noi</option>
                             <option value="Da Nang">Da Nang</option>
-                            <option value="Others">Others</option>
                         </select>
                     </div>
                     <button type="submit" id="btn-search-form" class="search-form-submit">
@@ -44,13 +43,9 @@
                             <div class="job-update">
                                 <h4><b>{{this.namejob}}</b></h4>
                                 <i class="fa fa-briefcase"></i><span>{{this.time}}</span><br>
-                                <i class="fa fa-solid fa-location-dot"></i><span>{{this.location}}</span>
-                                <p class="mt-2">Từ khóa: {{this.keyword}}</p>
-                                <p class="mt-1"
-                                    style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"
-                                >
-                                    Mô tả: {{this.description}}
-                                </p>
+                                <i class="fa fa-solid fa-location-dot"></i><span>{{this.location}}</span><br>
+                                <i class="fa fa-solid fa-dollar-sign"></i><span>{{this.money}}</span>
+                                <p class="mt-2">Từ khóa liên quan: {{this.keyword}}</p>
                             </div>
 
                             <div class="apply-btn">
