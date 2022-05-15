@@ -5,7 +5,8 @@
 
 <div class="table-content">
 
-            <table class="table">
+        <table class="table">
+        <h2 class="manager-title text-center">Danh sách công việc</h2>
         <thead class="thead-dark">
             <tr>
             <th scope="col">#</th>
@@ -21,10 +22,10 @@
                     <td class="text-center">{{this.namejob}}</td>
                     <td class="text-center">{{this.createdAt}}</td>
                     <td class="text-center">
-                        <a href="/{{this._id}}/user_apply_page">Số người nộp đơn</a> |
-                        <a href="/{{this._id}}/edit_post_page">Sửa</a> |
-                        <a href="/{{this._id}}/delete_post">Xóa</a> |
-                        <a href="/search/{{this._id}}/detail">Xem chi tiết</a>
+                        <a class="mr-5" href="/{{this._id}}/user_apply_page"><i class="fa-solid fa-user"></i>Người ứng tuyển</a>
+                        <a class="mr-5" href="/{{this._id}}/edit_post_page"><i class="fa-solid fa-pen-to-square"></i>Sửa</a>
+                        <a class="mr-5" href="/search/{{this._id}}/detail"><i class="fa-solid fa-eye"></i>Xem</a>
+                        <a href="/{{this._id}}/delete_post"><i class="fa-solid fa-trash-can"></i>Xóa</a>
                     </td>
                 </tr>
            {{/each}}

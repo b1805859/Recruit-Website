@@ -6,7 +6,8 @@
 <div class="table-content">
 
             <table class="table">
-        <thead class="thead-dark">
+        <h2 class="manager-title text-center">Danh sách tài khoản ứng tuyển</h2>
+        <thead class="thead-dark ">
             <tr>
             <th scope="col">#</th>
             <th scope="col" class="text-center">Email</th>
@@ -24,7 +25,7 @@
                     <td class="text-center">{{this.userLinkCV}}</td>
           
                     <td class="text-center">  
-                        <a href="/{{../Job._id}}/{{this._id}}/delete_user_apply">Xóa</a>
+                        <a href="/{{../Job._id}}/{{this._id}}/delete_user_apply"><i class="fa-solid fa-trash-can"></i>Xóa</a>
                     </td>
                 </tr>
             {{/each}}
