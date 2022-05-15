@@ -17,6 +17,7 @@ const Jobs = new Schema(
     money: { type: String },
     id_user: { type: String },
     approve: { type: Boolean, default: 'false' },
+    time: { type: Date },
     user_apply: [
       {
         userEmail: { type: String },
