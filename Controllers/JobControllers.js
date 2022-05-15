@@ -94,6 +94,14 @@ class JobControllers {
     jobs.save();
     res.redirect('/search/jobs');
   }
+
+  contact(req, res) {
+    res.render('search/contact', { username: req.user.name });
+  }
+
+  security(req, res) {
+    res.render('search/security', { username: req.user.name });
+  }
 }
 
 module.exports = new JobControllers();
