@@ -22,9 +22,9 @@
                     <td class="text-center">{{this.namejob}}</td>
                     <td class="text-center">{{this.createdAt}}</td>
                     <td class="text-center">
-                        <a href="/manager/{{this._id}}/approved">Duyệt</a> |
-                        <a href="/manager/{{this._id}}/detail">Xem chi tiết</a> |
-                        <a href="/manager/{{this._id}}/approve_delete">Xóa</a>
+                        <a class="mr-2" href="/manager/{{this._id}}/approved"><i class="fa-solid fa-square-check"></i>Duyệt</a>
+                        <a class="mr-2" href="/manager/{{this._id}}/detail"><i class="fa-solid fa-eye"></i>Xem</a>
+                        <a href="/manager/{{this._id}}/approve_delete"><i class="fa-solid fa-trash-can"></i>Xóa</a>
                     </td>
                 </tr>
            {{/each}}
