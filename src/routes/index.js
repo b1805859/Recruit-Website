@@ -1,6 +1,5 @@
 const home = require('./home');
 const search = require('./search');
-const information = require('./information');
 const user = require('./user');
 const manager = require('./manager');
 const auth = require('../../middlewares/auth.js');
