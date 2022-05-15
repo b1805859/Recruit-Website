@@ -35,15 +35,12 @@
     {{!-- ----------------------------------------render job--------------------------------------------- --}}
     <section id="jobs">
         <div class="container jobs-overlow" >
-            <h5>RECENT UPDATES</h5>
+            <h5>Việc làm mới nhất</h5>
 
             <div data-aos="fade-left" data-aos-duration="800">
                 {{#each Jobs}}
                         <div class="company-details">
                             <div class="job-update">
-                               <div class="job-update-left">
-                                    <img /
-                               </div>
                                <div class="job-update-right">
                                      <h4><b>{{this.namejob}}</b></h4>
                                     <i class="fa fa-briefcase"></i><span>{{this.time}}</span><br>
@@ -55,9 +52,9 @@
                             </div>
 
                             <div class="apply-btn">
-                                <button type="button" class="btn btn-primary mr-2"><a href="/search/{{this._id}}/detail" style="color:#fff">Read more</a></button>
+                                <button type="button" class="btn btn-primary mr-2"><a href="/search/{{this._id}}/detail" style="color:#fff">Xem chi tiết</a></button>
                                 <button type="button" id="btn-apply" class="btn btn-primary mr-3" >
-                                    <a href="/search/{{this._id}}/apply" style="color: #fff !important">Apply</a>
+                                    <a href="/search/{{this._id}}/apply" style="color: #fff !important">Ứng tuyển</a>
                                 </button>
                             </div>
                         </div>
