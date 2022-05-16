@@ -240,7 +240,7 @@ select:focus {
   height: 36px;
   display: inline-block;
   padding: 0 15px;
-  background-color: #EA1E30;
+  background-color: #ea1e30;
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -300,7 +300,7 @@ select:focus {
   padding: 0 30px;
   float: right;
   box-shadow: none !important;
-  background: #EA1E30;
+  background: #ea1e30;
   border-radius: 25px; }
 
 .pagelink li {
@@ -343,7 +343,7 @@ select:focus {
 
 .job-details__paragraph-title {
   font-size: 23px;
-  color: #EA1E30;
+  color: #ea1e30;
   font-weight: 400;
   margin: 30px 0 0; }
 
@@ -412,7 +412,7 @@ footer {
 .title.ularge {
   margin-bottom: 30px;
   line-height: 1.2;
-  color: #EA1E30 !important; }
+  color: #ea1e30 !important; }
 
 .main-article {
   padding: 40px; }
@@ -427,7 +427,7 @@ div.text > h4 {
 #text-security > h2,
 #text-security > h3,
 #text-security > h4 {
-  color: #EA1E30 !important; }
+  color: #ea1e30 !important; }
 
 div.text {
   font-size: 16px;
@@ -456,7 +456,7 @@ div.text > ul {
 
 .btn-apply {
   border: none;
-  background-color: #EA1E30;
+  background-color: #ea1e30;
   height: 50px;
   font-size: 18px;
   color: white; }
@@ -507,7 +507,7 @@ div.text > ul {
   line-height: 140px; }
 
 .form-submit-btn {
-  background-color: #EA1E30;
+  background-color: #ea1e30;
   color: #fff !important; }
 
 @media (max-width: 739px) {
