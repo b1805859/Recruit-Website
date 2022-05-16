@@ -11,6 +11,7 @@ a {
   text-decoration: none !important; }
 
 input[type='text'],
+input[type='email'],
 input[type='email']:focus,
 input[type='password']:focus,
 textarea,
